@@ -9,7 +9,7 @@ module.exports = {
       filename: 'bundle.js'
     },
 
-    //add modules (babel)
+    //add modules (babel and css-loader)
     module: {
       loaders: [
         {
@@ -19,6 +19,10 @@ module.exports = {
           query: {
             presets: ['es2015']
           }
+        },
+        {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader'
         }
       ]
     }
